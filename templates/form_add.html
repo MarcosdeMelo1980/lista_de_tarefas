@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Tarefa - Taskrun</title>
+
+    <!-- Adicione o Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Adicione a fonte Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa; /* Cor de fundo cinza claro */
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff; /* Cor do texto azul */
+            font-weight: bold; /* Texto em negrito */
+        }
+
+        h2 {
+            color: #38096e; /* Cor do texto roxo */
+        }
+
+        nav {
+            background-color: #38096e; /* Cor de fundo azul */
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav h1 {
+            color: #fff; /* Cor do texto branco */
+            font-weight: bold; /* Texto em negrito */
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            color: #38096e; /* Cor do texto roxo para os rótulos */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Taskrun</h1>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center">Adicionar Tarefa</h2>
+
+        <!-- Formulário de Adição de Tarefas -->
+        <form action="/add" method="post">
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título:</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição:</label>
+                <textarea class="form-control" id="descricao" name="descricao"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="data" class="form-label">Data:</label>
+                <input type="date" class="form-control" id="data" name="data" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="hora" class="form-label">Hora:</label>
+                <input type="time" class="form-control" id="hora" name="hora">
+            </div>
+
+            <button type="submit" class="btn btn-success">Adicionar Tarefa</button>
+        </form>
+    </div>
+
+    <!-- Adicione o Bootstrap JS (opcional, necessário para alguns recursos do Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
